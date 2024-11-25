@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sondage 3 films préférés</title>
+  </head>
+  <body>
+    <script>
+      //PSEUDO-CODE
+      // -----------------------------------------
+      //Affiche une fenêtre d'alerte avec comme message "Nous faisons un sondage sur les films d'animation"
+      //Créer une boite : firstFavoriteMovieUser
+      //Demande à l'utilisateur "Quels est ton premier film préféré ?" et stocke la réponse dans la boite : firstFavoriteMovieUser
+      //Créer une boite : secondFavoriteMovieUser
+      //Demande à l'utilisateur "Quels est ton deuxième film préféré ?" et stocke la réponse dans la boite : secondFavoriteMovieUser
+      //Créer une boite : thirdFavoriteMovieUser
+      //Demande à l'utilisateur "Quels est ton troisième film préféré ?" et stocke la réponse dans la boite : thirdFavoriteMovieUser
+      //Affiche une fenêtre de confirmation avec comme message "Tu as choisi les films suivants:" + firstFavoriteMovieUser + secondFavoriteMovieUser + thirdFavoriteMovieUser + " ?"
+      //Si l'utilisateur clique sur "Annuler" alors écrire dans le body "Rafrachissez la page pour recommencer"
+      //Sinon affiche dans le body la concatenation de "<h2>Vos trois films préférés sont :</h2>" + "<ul>" + "<li>" + firstFavoriteMovieUser +"</li>" + "<li>" + secondFavoriteMovieUser + "</li>" + "<li>" + thirdFavoriteMovieUser + "</li>" +"</ul>"
+
+      //ENONCE
+      // -----------------------------------------
+      //Avertis l'utilisateur de l'on fait un sondage sur les films d'animation
+      //Demande les 3 films d'animation préférés de l'utilisateur
+      //Affiche une fenêtre avec ses 3 films d'animation préférés et demande lui de valider
+      //Ecris les 3 films sur la page sous forme de liste à puces
+
+      //CODE
+      // -----------------------------------------
+      window.alert("Nous faisons un sondage sur les films d'animation");
+
+      let firstFavoriteMovieUser = window.prompt(
+        "Quels est ton premier film préféré ?"
+      );
+
+      let secondFavoriteMovieUser = window.prompt(
+        "Quels est ton deuxième film préféré ?"
+      );
+      let thirdFavoriteMovieUser = window.prompt(
+        "Quels est ton troisième film préféré ?"
+      );
+
+      let fullMovie = window.confirm(
+        "Tu as choisi les films suivants:" +
+          " " +
+          firstFavoriteMovieUser +
+          " " +
+          secondFavoriteMovieUser +
+          " " +
+          thirdFavoriteMovieUser +
+          " ?"
+      );
+
+      if (fullMovie === null) {
+        document.write("Rafrachissez la page pour recommencer");
+      } else {
+        document.write(
+          "<h2>Vos trois films préférés sont :</h2>" +
+            "<ul>" +
+            "<li>" +
+            firstFavoriteMovieUser +
+            "</li>" +
+            "<li>" +
+            secondFavoriteMovieUser +
+            "</li>" +
+            "<li>" +
+            thirdFavoriteMovieUser +
+            "</li>" +
+            "</ul>"
+        );
+      }
+    </script>
+  </body>
+</html>

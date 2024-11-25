@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions</title>
+  </head>
+  <body>
+    <script>
+      //PSEUDO-CODE
+      // -----------------------------------------
+      // Créer une boite : favoriteMovie
+      // Demande à l'utilisateur "Quel est ton film préféré ?" et stocke la réponse dans la boite : favoriteMovie
+      // Verifier si la valeur de favoriteMovie est null
+      // Si c'est le cas, écrire sur la page "Tu ne veux pas me dire ton film préféré ?"
+      // Sinon, écrire sur la page "Ton film préféré est " + favoriteMovie
+
+      //ENONCE
+      // -----------------------------------------
+      // Demande à l'utilisateur quel est son film préféré
+      // Si l'utilisateur refuse de répondre, écris un message sur la page
+      // Si l'utilisateur répond, écris un message sur la page avec le nom de son film préféré
+      // -----------------------------------------
+
+      //CODE
+      // -----------------------------------------
+      let favoriteMovie = prompt("Quel est ton film préféré ?");
+      if (favoriteMovie === null) {
+        document.write("Tu ne veux pas me dire ton film préféré ?");
+      } else {
+        document.write(`Ton film préféré est ${favoriteMovie}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Défi 1</title>
+  </head>
+  <body>
+    <script>
+      // ENONCE
+      // ------------------------------------------------
+      // Demande à l'utilisateur de saisir le nombre de devoirs à évaluer
+      // Demande à l'utilisateur de saisir la note de chaque devoir un à un
+      // Calcule la moyenne de toutes les notes
+      // Affiche dans la page la moyenne avec un message
+
+      //PSEUDO CODE
+      // ------------------------------------------------
+      // Créer une boite : nbDevoirs
+      // Demande à l'utilisateur de répondre au message "Combien de devoirs as-tu à évaluer ?" et stocke la réponse dans la variable nbDevoirs
+      // Créer une boite : totalNotes
+      // Créer une boucle pour demander à l'utilisateur "Saisis la note du devoir n°" et fait la concatenation de la réponse dans la variable totalNotes, totalNotes += la réponse utilisateur
+      // Créer une boite : moyenne
+      // Fais le calcul suivant : moyenne = totalNotes / nbDevoirs
+      // Écris dans la body "Ta note moyenne est de + moyenne".
+
+      //CODE
+      // ------------------------------------------------
+      const nbDevoirs = Number(
+        window.prompt("Combien de devoirs as-tu à évaluer ?")
+      );
+      let totalNotes = 0;
+      for (let i = 1; i <= nbDevoirs; i++) {
+        let noteDevoirs = Number(
+          window.prompt("Saisis la note du devoir n°" + i)
+        );
+        totalNotes += noteDevoirs;
+      }
+      let moyenne = totalNotes / nbDevoirs;
+      document.write("Ta note moyenne est de " + moyenne);
+    </script>
+  </body>
+</html>

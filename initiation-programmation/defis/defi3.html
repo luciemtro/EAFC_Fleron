@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Défi 3</title>
+  </head>
+  <body>
+    <script>
+      // ENONCE
+      // ------------------------------------------------
+      // Demande à l'utilisateur le nombre total de billets qu'il a pour aller au concert de Coldplay
+      // Demander à l'utilisateur de saisir le prix de chaque billet un à un
+      // Demande à l'utilisateur s'il dispose d'un code promotionnel
+      // S'il en possède un, applique une réduction de 10% sur le coût total des billets
+      // Affiche dans la page le coût total avec un message du type "Le coût total de vos billets est de X.XX euros"
+
+      // PSEUDO CODE
+      //-------------------------
+      // Créer une boite : nbBillets
+      // Demmande à l'utilisateur "Combien de billets as-tu pour le concert de Coldplay ?"
+      // Créer une boite : prixBillets
+      // Créer une boucle pour demander à l'utilisateur "Quel est le prix du billet N°" et fait la calcul avec la réponse += prixBillets
+      // Créer une boite boolean : codePromo
+      // Demmande à l'utilisateur "As-tu un code promo ?" et stocke la réponse dans codePromo
+      // Créer une boite : total
+      // Si codePromo est true, fait le calcul total = prixBillets * 0.9
+      // Sinon, fait le calcul total = prixBillets
+      // Écris dans le body le message "Le coût total de vos billets est de " + total + " euros"
+
+      // CODE
+      //-------------------------
+      const nbBillets = Number(
+        window.prompt("Combien de billets as-tu pour le concert de Coldplay ?")
+      );
+      let prixBillets = 0;
+      for (let i = 1; i <= nbBillets; i++) {
+        prixBillets += Number(
+          window.prompt("Quel est le prix du billet N°" + i)
+        );
+      }
+      const codePromo = window.prompt("As-tu un code promo ?") === "oui";
+      let total = 0;
+      if (codePromo) {
+        total = prixBillets * 0.9;
+      } else {
+        total = prixBillets;
+      }
+      document.write("Le coût total de vos billets est de " + total + " euros");
+    </script>
+  </body>
+</html>
